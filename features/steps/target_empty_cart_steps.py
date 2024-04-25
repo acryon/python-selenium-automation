@@ -12,9 +12,7 @@ def open_target(context):
 
 @when('Click on cart icon')
 def click_cart(context):
-#    context.driver.find_element(By.CSS_SELECTOR, "a[data-test='@web/CartLink']").click()
-#    sleep(7)
-     context.driver.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a[data-test='@web/CartLink']").click()
+    context.driver.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR,"a[data-test='@web/CartLink']"))).click()
 
 
 @then('Verify "Your cart is empty" message is shown')
@@ -28,11 +26,9 @@ def click_sign_in(context):
    context.driver.find_element(By.CSS_SELECTOR, "a[data-test='@web/AccountLink']").click()
 
 
-
 @then('Verify sign in is clickable from right side navigation menu')
 def sign_in_side_navigation(context):
-#    context.driver.find_element(By.CSS_SELECTOR, "a[data-test='accountNav-signIn']").click()
-     context.driver.wait.until(EC.element_to_be_clickable(By.CSS_SELECTOR, "a[data-test='accountNav-signIn']").click()
+    context.driver.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a[data-test='accountNav-signIn']"))).click()
 
 
 @then('Verify "Sign into your Target account" message is shown')
